@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>summer-sale</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+      <script>
+          tailwind.config = {
+           theme: {
+             extend: {
+               colors: {
+                 "primary-color": "#E527B2",
+                 "banner-bg-color": "#F9F6E2",
+                 "primary-bg-color": "#F8F8F8",
+                 "title-color": "#111",
+                 "light-gray": "#11111180",
+               },
+               lineHeight: {
+                 "extra-loose": "1.1",
+                 12: "3rem",
+               },
+             },
+           },
+         };
+      </script>
+      <style>
+         .work-sans {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         }
+
+         .cartVisibility {
+         display: block;
+         position: fixed;
+         width: 80%;
+         top: 0;
+         right: 0;
+         transform: rotate(-50%,-50%);
+         background-color: rgb(201, 133, 133);
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+         z-index: 3;
+         transition: right 0.5s ease, transform 0.5s ease; /* Add transition */
+         }
+
+      @media screen and (max-width:500px){
+         .cartVisibility {
+      width: 100%;
+      }
+      }
+
+      </style>
+   </head>
+   <body class="work-sans" >
+      
+      <header class="flex items-center mx-w-[1920px] bg-banner-bg-color text-center lg:text-left py-10 mx-auto">
+         
+         <div class="flex flex-col-reverse md:flex-row md:gap-y-11 gap-3 space-y-3 items-center w-[100%] sm:w-[80%] mx-auto">
+           
+            <article class="flex-1 space-y-3 grid justify-end">
+               <span class="text-titile-color text-xl font-[300] ml-5 text-center">---SALE FEVER---</span>
+               
+               <h1 class="text-[25px] sm:text-[35px] md:text-[20px] lg:text-[50px] leading-[1.2] lg:leading-extra-loose font-[500] mt-50 text-title-color w-[90%] sm:w-[75%] lg-w[70%] lg:text-left mx-auto">
+                  Purchase TK 200 or above & get <span class="text-primary-color">20% off</span>
+               </h1>
+              
+               <div class="flex flex-col sm:flex-row gap-3 items-center justify-center pt-4 llg:pt-7">
+                  <p class="text-title-color">Use Promo Code</p>
+                  <button class="py-2 px-3 rounded-lg bg-primary-color text-white border-none">SELL200</button>
+               </div>
+            </article>
+            
+            <div class="flex-1">
+               <img class="w-[90%] sm:w-[70%] md:w-[90%] mx-auto" src="./images/Summer 1.png" alt="" />
+            </div>
+         </div>
+      </header>
+      
+      <main class="bg-gray-50 mx-w-[1890px] mx-auto px-3 lg:px-0">
+       
+        <div class="w-[100%] py-[45px] lg:w-[95%] mx-auto">
+           <h2 class="text-[25px] pb-4 text-center md:text-left sm:text-[35px] md:text-[25px] lg:text-[30px] leading font-[700] text-title-color">Kitchenware</h2>
+           <div class="flex flex-wrap gap-5">
+             <div class="flex-1">
+                <div class="flex-1 flex flex-wrap gap-5">
+                   
+                   <div onclick="calculate(this)" class="bg-white basis-[240px] flex-1 p-3 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod1.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">K. Accessories</h3>
+                         <p class="text-light-gray mt-1">39.00 TK</p>
+                      </article>
+                   </div>
+                   
+                   <div  onclick="calculate(this)" class="bg-white basis-[240px] flex-1 p-3 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod2.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">K. Accessories</h3>
+                         <p class="text-light-gray mt-1">25.00 TK</p>
+                      </article>
+                   </div>
+                   
+                   <div  onclick="calculate(this)" class="bg-white basis-[240px] p-3 flex-1 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod3.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">Home Cooker</h3>
+                         <p class="text-light-gray mt-1">49.00 TK</p>
+                      </article>
+                   </div>
+                </div>
+                
+                <h2 class="text-[25px] pt-4 pb-3 text-center md:text-left sm:text-[35px] md:text-[25px] lg:text-[30px] leading font-[700] text-title-color">Sportswear</h2>
+                <div class="flex-1 flex flex-wrap gap-6">
+                   
+                   <div  onclick="calculate(this)" class="bg-white basis-[240px] flex-1 p-3 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod4.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">Sports Back Cap</h3>
+                         <p class="text-light-gray mt-1">49.00 TK</p>
+                      </article>
+                   </div>
+                   
+                   <div  onclick="calculate(this)" class="bg-white basis-[240px] flex-1 p-3 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod5.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">Full Jersey Set</h3>
+                         <p class="text-light-gray mt-1">69.00 TK</p>
+                      </article>
+                   </div>
+                   
+                   <div  onclick="calculate(this)" class="bg-white basis-[240px] p-3 flex-1 text-center rounded-lg">
+                      <div class="bg-gray-150 flex justify-center p-2">
+                         <img src="./images/prod6.png" alt="" />
+                      </div>
+                      <article class="p-5">
+                         <p>
+                         <div class="rating w-[90px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                         </div>
+                         </p>
+                         <h3 class="font-bold text-title-color">Sports cates</h3>
+                         <p class="text-light-gray mt-1">159.00 TK</p>
+                      </article>
+                   </div>
+                </div>
+              </div>
+             
+                 <div id="cartList" class=" fixed lg:w-[30%] lg:basis-[30%] hidden lg:block lg:sticky top-0 h-screen">
+                  <i onclick="showCart()" class="fa-solid fa-xmark text-red-400 cursor-pointer lg:hidden font-bold right-3 top-1 text-3xl absolute"></i>
+
+                    
+                    <div class="bg-white p-5 rounded-lg">
+                       <h3 class="text-title-color text-2xl font-[500] mb-4">Have coupon?</h3>
+                       <label for="code" class="flex items-center justify-between h-[40px] lg:h-[50px] rounded-lg border-gray-400 border-[1px]">
+                          <input id="couponCodeInput" class="bg-transparent outline-none p-3 w-full h-[100%]" type="text" name="code" placeholder="Coupon code"> 
+                          <button id="Apply-btn" class="bg-gray-300 py-1 lg:py-2  px-4 lg:px-5 rounded-tr-lg rounded-br- h-[100%] text-white" disabled>Apply</button>
+                       </label>
+                    </div>
+                    <div class="bg-white mt-8 pt-5 pb-5 px-6 space-y-1 rounded-lg">
+                       <div id="chosenProducts" class="space-y-1"></div>
+                       <hr>
+                       <h2 class="text-[17px] text-black flex pt-[10px]">Total price: <p class="text-light-gray"><span class="ml-2" id="totalPrice">000.00</span> TK</p></h2>
+                       <h2 class="text-[17px] text-black flex">Discount: <p class="text-light-gray"><span class="ml-2" id="discountElemnet">000.00</span> TK</p></h2>
+                       <h2 class="text-[17px] text-black flex">Total: <p class="text-light-gray"><span class="ml-2" id="total">000.00</span> TK</p></h2><br>
+  
+                       <button id="makePurchase" onclick="my_modal_5.showModal(); hideCart()" class="bg-gray-300 inline-block py-2 px-5 rounded-lg w-full text-white" disabled>Make Purchase</button>
+                       
+                       
+                       <dialog id="my_modal_5" class="modal modal-middle p-3  sm:modal-middle">
+                          <form method="dialog" class="modal-box">
+                             <img class="mx-auto" src="./images/congo.png" alt="">
+                             <h3 class="font-bold text-black text-center text-3xl">Congratulations</h3>
+                             <p class="pt-4 text-center">Your Purchase the product</p>
+                             <button class="text-1xl bg-primary-color py-2 px-5 rounded-lg mt-5 block text-black mx-auto justify-center" id="reset">Go Home</button>
+                       </form>
+                       </dialog>
+                    </div>
+                 </div>
+
+              </div>
+            </div>
+         </div>
+         <button class="bg-[#2ffcff37] lg:hidden p-3 sm:p-4  rounded-tl-[50%] rounded-bl-[50%] text-white fixed z-10 top-[83%] sm:top-[80%] right-[0px]" onclick="showCart()"><img class="w-[40px] sm:w-[50px]" src="./images/cart.png" alt="">
+               <div id="badge" class="badge bg-primary-color absolute bottom-10 text-[12px] font-bold sm:bottom-18 right-0 p-3 w-[20px] h-[20px]"></div>
+      </main>
+      
+      
+      <script src="./js/utility.js"></script>
+      <script src="./js/script.js"></script>
+   </body>
+</html>
